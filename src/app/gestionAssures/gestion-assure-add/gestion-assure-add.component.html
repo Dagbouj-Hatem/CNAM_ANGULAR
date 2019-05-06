@@ -1,0 +1,138 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" id="card">
+        <div class="header">
+          <div class="text-right">
+          </div>
+        </div>
+        <div class="content">
+          <form action="" class="was-validated">
+            <div class="form-group col-md-9">
+              <label for="convention">Convention:</label>
+              <input type="text" class="form-control" id="convention" placeholder="Votre convention ici"
+                name="convention" disabled="true" required>
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="matricule">Matricule:</label>
+              <input type="text" class="form-control" id="matricule" placeholder="La matricule d'assuré étranger ici"
+                name="matricule" required>
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-9">
+              <label for="nationnalite">Nationnalite:</label>
+              <input type="text" class="form-control" id="nationnalite" placeholder="Votre nationnalite ici"
+                name="nationnalite" required>
+              <div class="invalid-feedback">d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="matricule etranger">Matricule étranger:</label>
+              <input type="text" class="form-control" id="matricule etranger"
+                placeholder="La matricule étranger d'assuré étranger ici" name="matricule etranger">
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="nom">Nom ASS:</label>
+              <input type="text" class="form-control" id="nom" placeholder="Le nom d'assuré étranger ici" name="nom">
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="prenom">Prénom ASS:</label>
+              <input type="text" class="form-control" id="prenom" placeholder="Le prénom d'assuré étranger ici"
+                name="prenom">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cin">CIN:</label>
+              <input type="text" class="form-control" id="cin" placeholder="CIN d'assuré étranger ici" name="cin">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="situation">Situation Ass:</label>
+              <input type="text" class="form-control" id="situation" placeholder="La situation d'assuré étranger ici"
+                name="situation">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-9">
+              <label for="adress tunis">Adress tunis:</label>
+              <input type="text" class="form-control" id="adress tunis" placeholder="l'adress d'assuré en tunis"
+                name="adress tunis">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="cp tu">CP TU:</label>
+              <select class="form-control" id="cp tu">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-9">
+              <label for="adress étranger">Adress étranger:</label>
+              <input type="text" class="form-control" id="adress étranger" placeholder="l'adress d'assuré à l'étranger"
+                name="adress tunis">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="cp et">CP ET:</label>
+              <select class="form-control" id="cp et">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="content table-responsive table-full-width">
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th> Type</th>
+                    <th> Rang</th>
+                    <th> Nom</th>
+                    <th> Prénom</th>
+                    <th> Date Naissance</th>
+                    <th>CIN</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <select id="cp et">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select></td>
+                    <td>
+                      <input type="number" class="form-control" id="rang" name="rang" required>
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" id="nom" name="nom" required>
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" id="prénom" name="prénom" required>
+                    </td>
+                    <td>
+                      <input type="date" class="form-control" id="date" name="date" required>
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" id="cin" name="cin" required>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-right">
+              <a [routerLink]="['/Assurés']" class="btn btn-success btn-fill"><i class="ti-save"></i>Enregister</a>
+              <a [routerLink]="['/Assurés']" class="btn btn-danger btn-fill"><i class="ti-close"></i>Quiter</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

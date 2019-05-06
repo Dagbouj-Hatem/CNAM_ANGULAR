@@ -1,0 +1,19 @@
+// les label 
+label {
+    color:black;
+    font-weight:bold;
+    font-style: italic;
+}
+// les champs text
+input[type=text] , select , input[type=date] ,input[type=number] {
+    background-color: #e6e6e6;
+    color: black;
+  }
+
+  // les champs ivalid 
+  .invalid-feedback{
+      color : red;
+  }
+  ::placeholder { /* Firefox, Chrome, Opera */ 
+    color: blue; 
+} 

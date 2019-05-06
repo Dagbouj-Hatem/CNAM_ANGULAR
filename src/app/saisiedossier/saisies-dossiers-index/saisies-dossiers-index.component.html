@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="header"> 
+          <div class="text-right">
+            <a [routerLink]="['/saisie/create/']">
+              <button class="btn btn-primary btn-fill"><i class="ti-marker-alt"></i> Saisie Dossier</button>
+            </a>
+          </div>
+        </div>
+        <div class="content table-responsive table-full-width">
+          <!--  zone de recherche -->
+          <div class="ofcol-md-4 col-md-4 text-right">
+            <input type="text" name="search" id="search" placeholder="Chercher ..."  class="form-control">
+          </div>
+          <!--  zone de recherche -->
+          <table class="table table-hover">
+            <thead class="thead-dark">
+              <tr> 
+              <th> ID</th>
+                <th> Nom</th>
+                <th> Prénom</th>
+                <th> Matricule</th>
+                <th> Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let saisie of saisiedossier">
+                  <td>{{ saisie.Id }}</td>
+                  <td>{{ saisie.nom }}</td>
+                  <td>{{ saisie.prenom }}</td>
+                  <td>{{ saisie.matricule }}</td>
+                  <td>{{ saisie.date }}</td>
+                  <td>
+                      <a [routerLink]="['/saisie/details/', saisie.id]" class="btn btn-info">Détails</a>
+                      <a [routerLink]="['/saisie/edit/', saisie.id]" class="btn btn-warning">Modifier</a>
+                      <a (click)=delete(saisie.id) class="btn btn-danger">Supprimer</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

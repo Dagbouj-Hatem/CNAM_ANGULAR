@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="header"> 
+          <div class="text-right">
+            <a [routerLink]="['/Assurés/create/']">
+              <button class="btn btn-primary btn-fill"><i class="ti-plus"></i> Ajouter un assuré</button>
+            </a>
+          </div>
+        </div>
+        <div class="content table-responsive table-full-width">
+          <table datatable  [dtOptions]="dtOptions" class="table table-hover">
+            <thead class="thead-dark">
+              <tr> 
+              <th> ID</th>
+                <th> Nom</th>
+                <th> Prénom</th>
+                <th> Matricule</th>
+                <th> Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let assure of gestionAssures">
+                  <td>{{ assure.Id }}</td>
+                  <td>{{ assure.nom }}</td>
+                  <td>{{ assure.prenom }}</td>
+                  <td>{{ assure.matricule }}</td>
+                  <td>{{ assure.date }}</td>
+                  <td>
+                      <a [routerLink]="['/Assurés/details/', assure.id]" class="btn btn-info">Détails</a>
+                      <a [routerLink]="['/Assurés/edit/', assure.id]" class="btn btn-warning">Modifier</a>
+                      <a (click)=delete(assure.id) class="btn btn-danger">Supprimer</a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

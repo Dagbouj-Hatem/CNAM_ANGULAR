@@ -1,0 +1,103 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" id="card">
+        <div class="header">
+          <div class="text-right">
+          </div>
+        </div>
+        <div class="content">
+          <form action="" class="was-validated">
+            <div class="form-group col-md-4">
+              <label for="num dossier">Nun Dossier:</label>
+              <input type="text" class="form-control" id="num dossier" placeholder="tapper le num de dossier ici"
+                name="num dossier" required>
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="convention">Convention:</label>
+              <input type="text" class="form-control" id="convention" placeholder="Votre convention ici"
+                name="convention" required>
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="matricule">Matricule:</label>
+              <input type="text" class="form-control" id="matricule" placeholder="La matricule d'assuré étranger ici"
+                name="matricule" required>
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="nom">Nom ASS:</label>
+              <input type="text" class="form-control" id="nom" placeholder="Le nom d'assuré étranger ici" name="nom">
+              <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="prenom">Prénom ASS:</label>
+              <input type="text" class="form-control" id="prenom" placeholder="Le prénom d'assuré étranger ici"
+                name="prenom">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="non bénéficier">Non Bénéficier:</label>
+              <input type="text" class="form-control" id="non bénéficier" placeholder="Le Nom  de bénéficier ici"
+                name="non bénéficier">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="rang">Rang:</label>
+              <input type="number" class="form-control" id="rang" placeholder="" name="rang">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-8">
+              <label for="adresse en tunisie">Adresse en Tunisie:</label>
+              <input type="text" class="form-control" id="adresse en tunisie"
+                placeholder="tapper la adresse en tunisie ici" name="adresse en tunisie">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="date dépot ">Date Dépot :</label>
+              <input type="date" class="form-control" id="date dépot " placeholder="tapper la date de dépot  ici"
+                name="date dépot ">
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="décision administrative">Décision Administrative:</label>
+              <select class="form-control" id="décision administrative">
+                <option>Accord</option>
+                <option>Rejet</option>
+                <option>Correspondance</option>
+                <option>pièces manquantes</option>
+                <option>A revoir</option>
+              </select>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="content table-responsive table-full-width">
+              <table class="table table-bordered">
+                <legend>Piéces:</legend>
+                <div class="form-group col-md-2">
+                  <label for="ref dos">Ref</label>
+                  <input type="text" class="form-control" id="ref dos" placeholder name="ref dos">
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group col-md-8">
+                  <label for="piéces">Piéces</label>
+                  <input type="text" class="form-control" id="piéces" placeholder name="piéces">
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="number">Number</label>
+                  <input type="number" class="form-control" id="number" placeholder name="number">
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+              </table>
+            </div>
+            <div class="text-right">
+              <a [routerLink]="['/administrative']" class="btn btn-success btn-fill"><i class="ti-save"></i>Enregister</a>
+              <a [routerLink]="['/administrative']" class="btn btn-danger btn-fill"><i class="ti-close"></i>Quiter</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="header"> 
+          <div class="text-right">
+            <a [routerLink]="['/validation/create/']">
+              <button class="btn btn-primary btn-fill"><i class='ti-check-box'></i> Validation des dossies</button>
+            </a>
+          </div>
+        </div>
+        <div class="content table-responsive table-full-width">
+          <table datatable  [dtOptions]="dtOptions" class="table table-hover">
+            <thead class="thead-dark">
+              <tr> 
+              <th> ID</th>
+                <th> Nom</th>
+                <th> Prénom</th>
+                <th> Matricule</th>
+                <th> Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let validation of validations">
+                  <td>{{ validation .Id }}</td>
+                  <td>{{ validation .nom }}</td>
+                  <td>{{ validation .prenom }}</td>
+                  <td>{{ validation .matricule }}</td>
+                  <td>{{ validation .date }}</td>
+                  <td>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
