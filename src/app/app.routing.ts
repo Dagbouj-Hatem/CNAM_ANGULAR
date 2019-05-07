@@ -1,17 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { UserComponent }   from './user/user.component';
-import { TableComponent }   from './table/table.component';
-import { TypographyComponent }   from './typography/typography.component';
-import { IconsComponent }   from './icons/icons.component';
-import { MapsComponent }   from './maps/maps.component';
-import { NotificationsComponent }   from './notifications/notifications.component';
-import { UpgradeComponent }   from './upgrade/upgrade.component';
-import { UserIndexComponent } from './users/user-index/user-index.component';
-import { UserEditComponent } from './users/user-edit/user-edit.component';
-import { UserAddComponent } from './users/user-add/user-add.component';
-import { UserGetComponent } from './users/user-get/user-get.component';
+import { DashboardComponent }   from './dashboard/dashboard.component'; 
+import { IconsComponent }   from './icons/icons.component'; 
+import { NotificationsComponent }   from './notifications/notifications.component';  
 import { GestionAssureIndexComponent } from './gestionAssures/gestion-assure-index/gestion-assure-index.component';
 import { GestionAssureAddComponent } from './gestionAssures/gestion-assure-add/gestion-assure-add.component';
 import { GestionAssureEditComponent } from './gestionAssures/gestion-assure-edit/gestion-assure-edit.component';
@@ -71,97 +62,41 @@ export const AppRoutes: Routes = [
     {
         path: 'dashboard',
         component: MainComponent,   
-        children: [  
-        {   path: '', 
+        children: [ 
+        /*
+        *   Home Menu 
+        */
+       
+        {   path: 'home', 
             component: DashboardComponent,
             canActivate:[AuthGaurdService] 
         },
-        {
-            path: 'user',
-            component: UserComponent,
-            canActivate:[AuthGaurdService]
-        },
-        {
-            path: 'table',
-            component: TableComponent,
-            canActivate:[AuthGaurdService]
-        },
-        {
-            path: 'typography',
-            component: TypographyComponent,
-            canActivate:[AuthGaurdService]
-        },
-        {
-            path: 'icons',
-            component: IconsComponent,
-            canActivate:[AuthGaurdService]
-        },
-        {
-            path: 'maps',
-            component: MapsComponent,
-            canActivate:[AuthGaurdService]
-        },
-        {
-            path: 'notifications',
-            component: NotificationsComponent,
-            canActivate:[AuthGaurdService]
-        },
-        {
-            path: 'upgrade',
-            component: UpgradeComponent,
-            canActivate:[AuthGaurdService]
-        },
-        /**
-         * gestion des utilisateurs 
-         *  */ 
-
-        
-        { // liste des utilisateurs
-            path: 'users',
-            component: UserIndexComponent,
-            canActivate:[AuthGaurdService]
-        },
-        { // add user
-            path: 'users/create',
-            component: UserAddComponent,
-            canActivate:[AuthGaurdService]
-        },
-        { // edit user by id
-            path: 'users/edit/:id',
-            component: UserEditComponent,
-            canActivate:[AuthGaurdService]
-        },
-        { // get single user by id
-            path: 'users/details/:id',
-            component: UserGetComponent,
-            canActivate:[AuthGaurdService]
-        },
-
+            
         /**
          * gestion des Assurés 
-         *  */ 
-
+         * 
+         */ 
         
         { // liste des Assurés
-            path: 'Assurés',
+            path: 'assurés',
             component: GestionAssureIndexComponent,
-            canActivate:[AuthGaurdService]
+            canActivate:[AuthGaurdService], 
         },
         { // add Assurés
-            path: 'Assurés/create',
+            path: 'assurés/create',
             component: GestionAssureAddComponent,
             canActivate:[AuthGaurdService]
         },
         { // edit Assurés by id
-            path: 'Assurés/edit/:id',
+            path: 'assurés/edit/:id',
             component: GestionAssureEditComponent,
             canActivate:[AuthGaurdService]
         },
         { // get single Assurés by id
-            path: 'Assurés/details/:id',
+            path: 'assurés/details/:id',
             component: GestionAssureDetailsComponent,
             canActivate:[AuthGaurdService]
-        },
+        } ,
 
         /**
          * gestion des formulaires
@@ -169,25 +104,39 @@ export const AppRoutes: Routes = [
 
         
         { // liste des formulaires
-            path: 'Formulaires',
+            path: 'formulaires',
             component: GestionFormulaireIndexComponent,
-            canActivate:[AuthGaurdService]
-        },
+            canActivate:[AuthGaurdService],  
+        }, 
         { // add formulaires
-            path: 'Formulaires/create',
+            path: 'formulaires/create',
             component: GestionFormulaireAddComponent,
             canActivate:[AuthGaurdService]
         },
         { // edit formulaires by id
-            path: 'Formulaires/edit/:id',
+            path: 'formulaires/edit/:id',
             component: GestionFormulaireEditComponent,
             canActivate:[AuthGaurdService]
         },
         { // get single formulaires by id
-            path: 'Formulaires/details/:id',
+            path: 'formulaires/details/:id',
             component: GestionFormulaireDetailsComponent,
             canActivate:[AuthGaurdService]
-        },
+        },   
+
+
+
+        {
+            path: 'icons',
+            component: IconsComponent,
+            canActivate:[AuthGaurdService]
+        }, 
+        {
+            path: 'notifications',
+            component: NotificationsComponent,
+            canActivate:[AuthGaurdService]
+        }, 
+        
         /**
          * etape administrative
          *  */ 

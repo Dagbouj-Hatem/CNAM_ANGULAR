@@ -4,13 +4,13 @@
       <div class="card">
         <div class="header"> 
           <div class="text-right">
-            <a [routerLink]="['/Assurés/create/']">
+            <a [routerLink]="['/dashboard/assurés/create/']">
               <button class="btn btn-primary btn-fill"><i class="ti-plus"></i> Ajouter un assuré</button>
             </a>
           </div>
         </div>
         <div class="content table-responsive table-full-width">
-          <table datatable  [dtOptions]="dtOptions" class="table table-hover">
+          <table class="table table-hover">
             <thead class="thead-dark">
               <tr> 
               <th> ID</th>
@@ -29,8 +29,8 @@
                   <td>{{ assure.matricule }}</td>
                   <td>{{ assure.date }}</td>
                   <td>
-                      <a [routerLink]="['/Assurés/details/', assure.id]" class="btn btn-info">Détails</a>
-                      <a [routerLink]="['/Assurés/edit/', assure.id]" class="btn btn-warning">Modifier</a>
+                      <a [routerLink]="['/dashboard/assurés/details/', assure.id]" class="btn btn-info">Détails</a>
+                      <a [routerLink]="['/dashboard/assurés/edit/', assure.id]" class="btn btn-warning">Modifier</a>
                       <a (click)=delete(assure.id) class="btn btn-danger">Supprimer</a>
                   </td>
               </tr>

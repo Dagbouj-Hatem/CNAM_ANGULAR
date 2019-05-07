@@ -9,17 +9,8 @@ import { NavbarModule} from './shared/navbar/navbar.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 import { NguiMapModule} from '@ngui/map';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import { UserComponent }   from './user/user.component';
-import { TableComponent }   from './table/table.component';
-import { TypographyComponent }   from './typography/typography.component';
-import { IconsComponent }   from './icons/icons.component';
-import { MapsComponent }   from './maps/maps.component';
-import { NotificationsComponent }   from './notifications/notifications.component';
-import { UpgradeComponent }   from './upgrade/upgrade.component';
-import { UserAddComponent } from './users/user-add/user-add.component';
-import { UserGetComponent } from './users/user-get/user-get.component';
-import { UserEditComponent } from './users/user-edit/user-edit.component';
-import { UserIndexComponent } from './users/user-index/user-index.component';
+import { IconsComponent }   from './icons/icons.component'; 
+import { NotificationsComponent }   from './notifications/notifications.component'; 
 import { GestionAssureIndexComponent } from './gestionAssures/gestion-assure-index/gestion-assure-index.component';
 import { GestionAssureAddComponent } from './gestionAssures/gestion-assure-add/gestion-assure-add.component';
 import { GestionAssureEditComponent } from './gestionAssures/gestion-assure-edit/gestion-assure-edit.component';
@@ -73,17 +64,8 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     DashboardComponent,
-    UserComponent,
-    TableComponent,
-    TypographyComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
-    UpgradeComponent,
-    UserAddComponent,
-    UserGetComponent,
-    UserEditComponent,
-    UserIndexComponent,
+    IconsComponent, 
+    NotificationsComponent, 
     GestionAssureIndexComponent,
     GestionAssureAddComponent,
     GestionAssureEditComponent,

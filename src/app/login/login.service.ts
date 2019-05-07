@@ -11,13 +11,13 @@ export class LoginService {
   
   constructor(private router:Router, private httpClient:HttpClientModule) { }
 
-  authenticate(username, password) {
+  authenticate(matricule, password) {
 
     // test  with data base  
    
     // test  without data base 
-    if (username === "hatem" && password === "000011") {
-      sessionStorage.setItem('username', username)
+    if (matricule === "hatem" && password === "000011") {
+      sessionStorage.setItem('matricule', matricule)
       return true;
     } else {
       return false;
@@ -25,13 +25,13 @@ export class LoginService {
   }
 
   isUserLoggedIn() {
-    let user = sessionStorage.getItem('username')
-    console.log(!(user === null))
+    let user = sessionStorage.getItem('matricule')
+    //console.log(!(user === null))
     return !(user === null)
   }
 
   logOut() {
-    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('matricule')
   }
 
 }

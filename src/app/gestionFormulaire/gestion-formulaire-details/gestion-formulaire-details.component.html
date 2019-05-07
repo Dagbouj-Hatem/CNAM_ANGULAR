@@ -1,6 +1,3 @@
-<p>
-  bonjour
-</p>
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-12">
@@ -12,32 +9,28 @@
               <div class="content">
                   <form action="" class="was-validated">
                       <div class="form-group col-md-9">
-                          <label for="date création dossier">Date création dossier:</label>
+                          <label for="date création dossier">Date création de dossier:</label>
                           <input type="date" class="form-control" id="date création dossier"
-                              placeholder="date création du dossier ici" name="date création dossier" required>
-                          <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+                              placeholder="date création du dossier ici" name="date création dossier">
                       </div>
                       <div class="form-group col-md-3">
                           <label for="créé par l'agent">Créé par l'agent:</label>
                           <input type="text" class="form-control" id="créé par l'agent" placeholder=""
-                              name="créé par l'agent" required>
-                          <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+                              name="créé par l'agent"> 
                       </div>
                       <div class="form-group col-md-9">
                           <label for="dernière modification">Date de Dernière Modification:</label>
                           <input type="Date" class="form-control" id="dernière modification" placeholder=""
-                              name="dernière modification" required>
-                          <div class="invalid-feedback">d'erreur si ce champs vide.</div>
+                              name="dernière modification">
                       </div>
                       <div class="form-group col-md-3">
                           <label for="date de création">Etat Dossier:</label>
                           <input type="text" class="form-control" id="date de création" placeholder=""
-                              name="date de création">
-                          <div class="invalid-feedback">lehna 7ot message d'erreur si ce champs vide.</div>
+                              name="date de création"> 
                       </div>
                       <div class="text-right">
-                          <a [routerLink]="['/Assurés']" class="btn btn-danger btn-fill"><i
-                                  class="ti-close"></i>Quiter</a>
+                          <a [routerLink]="['/dashboard/formulaires']" class="btn btn-info btn-fill"><i
+                                  class="ti-angle-double-left"></i> Retour</a>
                       </div>
                   </form>
               </div>

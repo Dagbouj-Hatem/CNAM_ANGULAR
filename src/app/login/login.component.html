@@ -10,30 +10,24 @@
         <h2 class="text-center">Authentification</h2>
         <form class="login-form" [formGroup]="loginForm" (ngSubmit)="authenticate()">
           <div class="form-group">
-            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
-            <input type="text" formControlName="username" class="form-control" placeholder="Your username here"
-              [ngClass]="{ 'is-invalid': submitted && formControls.username.errors }">
-            <div *ngIf="submitted && formControls.username.errors" class="invalid-feedback">
-              <div *ngIf="formControls.username.errors.required">Username is required</div> 
+            <label for="matricule" class="text-uppercase">Matricule</label>
+            <input type="text" formControlName="matricule" class="form-control" placeholder="Votre matricule"
+              [ngClass]="{ 'is-invalid': submitted && formControls.matricule.errors }" id="matricule">
+            <div *ngIf="submitted && formControls.matricule.errors" class="invalid-feedback">
+              <div *ngIf="formControls.matricule.errors.required">Le champs matricule est obligatoire.</div> 
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-            <input type="password" formControlName="password" class="form-control" placeholder=""
-              [ngClass]="{ 'is-invalid': submitted && formControls.password.errors }">
+            <label for="password" class="text-uppercase">Mot de passe</label>
+            <input type="password" formControlName="password" class="form-control" placeholder="Votre mot de passe"
+              [ngClass]="{ 'is-invalid': submitted && formControls.password.errors }" id="password">
             <div *ngIf="submitted && formControls.password.errors" class="invalid-feedback">
-              <div *ngIf="formControls.password.errors.required">Password is required</div>
-              <div *ngIf="formControls.password.errors.minlength">Password must be at least 6 characters</div>
+              <div *ngIf="formControls.password.errors.required">Le champs mot de passe est obligatoire.</div>
+              <div *ngIf="formControls.password.errors.minlength">Le mot de passe doit contenir au moins 6 caractères.</div>
             </div>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">
-              <small>Garder ma session active</small>
-            </label>
-          </div>
+          </div> 
           <div *ngIf="submitted && invalidLogin" class="alert alert-danger show" role="alert">
-            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <strong>Désolé!</strong> Ces identifiants ne correspondent pas à nos enregistrements.
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-login btn-block btn-lg">
@@ -41,7 +35,7 @@
             </button>
           </div>
         </form>
-        <div class="copy-text">copyright &copy; 2019 - all rights reserved</div>
+        <div class="copy-text">copyright &copy; 2019 - tous droits réservés</div>
       </div>
       <div class="col-md-8 banner-sec">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

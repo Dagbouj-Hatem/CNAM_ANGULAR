@@ -22,8 +22,16 @@ export class GestionFormulaireAddComponent implements OnInit {
   ngOnInit() {
     // create the validation
     this.formulaireForm = this.formBuilder.group({
-      num_dossier: ['', Validators.required , Validators.maxLength(10)], 
-      convention: ['', [Validators.required, ]]
+      num_dossier: ['', Validators.required, Validators.maxLength(10) ], 
+      convention: ['', Validators.required, ],
+      matricule: ['', Validators.required, ],
+      nom: ['', Validators.required, ],
+      prenom: ['', Validators.required, ],
+      date_etablissement: ['', Validators.required, ],
+      date_debut: ['', Validators.required, ],
+      date_fin: ['', Validators.required, ],
+      code_caisse: ['', Validators.required, ],
+      type_formulaire: ['', Validators.required, ],
     });
   }
 

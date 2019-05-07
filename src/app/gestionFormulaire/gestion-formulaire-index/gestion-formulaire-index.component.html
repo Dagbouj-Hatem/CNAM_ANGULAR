@@ -4,7 +4,7 @@
       <div class="card">
         <div class="header">
           <div class="text-right">
-            <a [routerLink]="['/dashboard/Formulaires/create']">
+            <a [routerLink]="['/dashboard/formulaires/create/']">
               <button class="btn btn-primary btn-fill"><i class="ti-plus"></i> Ajouter Formulaire</button>
             </a>
           </div>
@@ -29,8 +29,8 @@
                 <td>{{ formulaire.matricule }}</td>
                 <td>{{ formulaire.date }}</td>
                 <td>
-                  <a [routerLink]="['/Formulaires/details/', formulaire.id]" class="btn btn-info">Détails</a>
-                  <a [routerLink]="['/Formulaires/edit/', formulaire.id]" class="btn btn-warning">Modifier</a>
+                  <a [routerLink]="['/dashboard/formulaires/details/', formulaire.id]" class="btn btn-info">Détails</a>
+                  <a [routerLink]="['/dashboard/formulaires/edit/', formulaire.id]" class="btn btn-warning">Modifier</a>
                   <a (click)=delete(formulaire.id) class="btn btn-danger">Supprimer</a>
                 </td>
               </tr>

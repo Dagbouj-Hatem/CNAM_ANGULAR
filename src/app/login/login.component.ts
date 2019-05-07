@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from './login.service';
- 
+  
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     // create the validation
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required], 
+      matricule: ['', Validators.required], 
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   get formControls() { return this.loginForm.controls; }
 
 
-  //Authenticate the username and password 
+  //Authenticate the matricule and password 
   authenticate() {
         this.submitted = true;
 
@@ -42,9 +42,9 @@ export class LoginComponent implements OnInit {
             return;
         }
 
-        if (this.loginservice.authenticate(this.loginForm.value.username, this.loginForm.value.password)
+        if (this.loginservice.authenticate(this.loginForm.value.matricule, this.loginForm.value.password)
         ) {
-          this.router.navigate(['/dashboard'])
+          this.router.navigate(['/dashboard/home'])
         } else
           this.invalidLogin = true 
   }
